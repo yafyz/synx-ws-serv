@@ -55,3 +55,5 @@ i will maybe make this say to vscode that this is a debugger and redirect output
 dont read the source, i dont like js nor ts so dont expect it to look nice
 
 if something doesnt work, contact me on discord fyz#7690
+
+also bevare of unoriginal shameless skid ou1z
