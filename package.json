@@ -3,8 +3,8 @@
 	"publisher": "fyz",
 	"displayName": "Synapse X execute",
 	"description": "Execute code from VSC in synapse",
-	"version": "0.0.2",
-	"repository": "",
+	"version": "0.0.3",
+	"repository": "https://github.com/yafyz/synx-ws-serv",
 	"engines": {
 		"vscode": "^1.47.0"
 	},
