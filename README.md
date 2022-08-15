@@ -46,6 +46,29 @@ while wait(1) do
 end
 ```
 
+for SXv3 (too lazy to merge them)
+```lua
+repeat wait() until game:IsLoaded()
+while wait(1) do
+    pcall(function()
+        local ws = WebsocketClient.new("ws://localhost:33882/")
+        if not ws:Connect() then
+            continue
+        end
+        ws:Send("auth:" .. game.Players.LocalPlayer.Name)
+        ws.DataReceived:Connect(function(msg)
+            local func, err = loadstring(msg)
+            if err then
+                ws:Send("compile_err:" .. err)
+                return
+            end
+            func()
+        end)
+        ws.ConnectionClosed:Wait()
+    end)
+end
+```
+
 # maybe in future
 
 i will maybe make this say to vscode that this is a debugger and redirect output functions (print, warn, error) into the debug console
