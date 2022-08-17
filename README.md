@@ -53,7 +53,7 @@ while wait(1) do
     pcall(function()
         local ws = WebsocketClient.new("ws://localhost:33882/")
         if not ws:Connect() then
-            continue
+            return
         end
         ws:Send("auth:" .. game.Players.LocalPlayer.Name)
         ws.DataReceived:Connect(function(msg)
